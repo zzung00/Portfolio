@@ -1,0 +1,123 @@
+<style>
+    h1 {text-align: center;}
+    h1::first-letter {font-size: 50px;}
+    img { width: 200px; height: 200px; align-content: center; } 
+    body {background: linear-gradient(#fff 50%, #51e3d4 50%);}    
+    ul {list-style: none; position: absolute; padding-left: 32px; padding-top: 5px;}
+</style>
+
+<?php
+	extract(array_merge($_GET,$_POST));
+	session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+        <link rel="stylesheet" href="css/search.css?ver=1">
+        <link rel="stylesheet" href="css/menu.css?ver=1">
+        <link rel="stylesheet" href="css/box.css?ver=1">
+        <link rel="stylesheet" href="css/table.css?ver=1">
+        <link rel="stylesheet" href="css/login.css?ver=1">
+        <link rel="stylesheet" href="css/btnLogin.css?ver=1">
+        <title>LANI</title>
+        
+    </head>
+    <body>
+        <div>
+            <?php
+                if (!isset($id)) {
+            ?>
+            <form class="login_box" method="post">
+                <div class="login_label">
+                    <p>Login</p>
+                    아 이 디 : <input type="text" name="id" class="login_contain"><br>
+                    비밀번호 : <input type="password" name="pw" class="login_contain"><br>
+                    <input type="submit" class="btn-primary" value="login">
+                </div>
+            </form>
+            <?php
+                } else {
+                    $_SESSION["userid"]님 환영합니다!
+                }
+            ?>
+            <h1>Welcome Lani's website</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-txt" name="" placeholder="입력하세요">
+            <a class="search-btn" href="#">
+            <i class="fas fa-search"></i></a>
+        </div>
+       <h1><img src="assets/main.png"></h1>
+       <br><br>
+
+       <div class="adminActions">
+        <input type="checkbox" name="adminToggle" class="adminToggle" />
+        <a class="adminButton" href="#!"><i class="fa fa-bars"></i></a>
+        <div class="adminButtons">
+            <div class="dropdown-content">
+                <a href="#">시간표</a>
+                <a href="#">도움말</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+    <table class="box">
+        <tr>
+            <td>
+                <div class="item">
+                    <ul>
+                    <li><span style="font-size: 64px;">
+                        <i class="fas fa-server"></i>
+                      </span></li>
+                      <li>서버관리</li>
+                      <ul>
+                </div>
+            </td>
+            <td>
+                <div class="item"><br>
+                    <span style="font-size: 64px;">
+                        <i class="fab fa-android"></i>
+                      </span><br>모바일
+                </div>
+            </td>
+            <td>
+                <div class="item"><br>
+                    <span style="font-size: 64px;">
+                        <i class="fab fa-html5"></i>
+                      </span><br>웹
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="item"><br>
+                    <span style="font-size: 64px;">
+                        <i class="fab fa-python"></i>
+                      </span><br>프로그래밍
+                </div>
+            </td>
+            <td>
+                <div class="item"><br>
+                    <span style="font-size: 64px;">
+                        <i class="fas fa-microchip"></i>
+                      </span><br>컴퓨터구조
+                </div>
+            </td>
+            <td>
+                <div class="item"><br>
+                    <span style="font-size: 64px;">
+                        <i class="fab fa-raspberry-pi"></i>
+                      </span><br>임베디드
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    </body>    
+</html>

@@ -1,0 +1,28 @@
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: 10px;
+}
+
+.login_box {
+    margin-left: 84%;
+    position: fixed;
+    width:220px;
+    height:150px;
+    border:solid 1px #bbbbbb;
+    border-radius:15px;
+    /* margin:10px 0 0 10px;
+    padding:10px 0 0 15px; */
+}
+
+.login_label {
+    width:220px;
+    height:120px;
+    text-align: center;
+}
+
+.login_contain {
+    width: 100px;
+    height: 20px;
+}
